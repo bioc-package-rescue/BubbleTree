@@ -17,7 +17,7 @@ BTreePlotter <- setClass(
     representation(max.ploidy="numeric",
                    seq.col="character",
                    branch.col="character",
-                   branches="gg",
+                   branches="ANY",
                    max.size="numeric"),
 
     prototype = list(max.ploidy=6,
