@@ -9,7 +9,7 @@ utils::globalVariables(c("seg.size", "hds", "lrr", "bubble.size", "R", "HDS",
                          "trt.seg.size", "src.lrr", "src.hds", "trt.lrr", 
                          "trt.hds", "src.seqnames", "mutate", "."))
 
-setClass("gg")
+setOldClass("gg")
 
 BTreePlotter <- setClass(
     "BTreePlotter",
@@ -17,7 +17,7 @@ BTreePlotter <- setClass(
     representation(max.ploidy="numeric",
                    seq.col="character",
                    branch.col="character",
-                   branches="gg",
+                   branches="ANY",
                    max.size="numeric"),
 
     prototype = list(max.ploidy=6,
